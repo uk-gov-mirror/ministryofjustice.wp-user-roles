@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin name: MOJ Digital WP User Roles
- * Version: 1.0.1
+ * Version: 1.1.0
  * Description: A WordPress plugin to create user roles typically required by a MOJ Digital WordPress site.
  *
  * This creates a new role 'Site Manager' which extends Editor role adding support for:
@@ -12,7 +12,7 @@
 namespace MoJDigital\UserRoles;
 
 // KEEP SYNC'D WITH THE VERSION ABOVE
-define('MOJ_USER_ROLES_VERSION', '1.0.0');
+define('MOJ_USER_ROLES_VERSION', '1.1.0');
 // Turn debug mode on or off
 define('MOJ_USER_ROLES_DEBUG', false);
 // get the directory
