@@ -72,10 +72,10 @@ class Hooks
      */
     public static function allowUnfilteredHTMLforAllEditors($caps, $cap, $user_id) {
         if ( 'unfiltered_html' === $cap && user_can( $user_id, 'editor' ) ) {
-			return [ 'unfiltered_html' ];
-		}
+            return [ 'unfiltered_html' ];
+        }
 
-		return $caps;
+        return $caps;
     }
 
     /**
@@ -283,6 +283,7 @@ class Hooks
     {
         add_filter('editable_roles', __CLASS__ . '::filterEditableRoles', 10, 1);
         add_filter('map_meta_cap', __CLASS__ . '::filterPreventModificationOfAdminUser', 10, 4);
+        add_filter('map_meta_cap', __CLASS__ . '::allowUnfilteredHTMLforAllEditors', 10, 3);
         add_action('admin_menu', __CLASS__ . '::actionRestrictAppearanceThemesMenu', 999);
         add_action('admin_init', __CLASS__ . '::updateRoleMaybe', 10);
         add_action('admin_enqueue_scripts', __CLASS__ . '::loadAssets', 10);
